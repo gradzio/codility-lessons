@@ -15,7 +15,7 @@ class PermMissingElem
             return $A[0] + 1;
         }
 
-        for($i = 0; $i <= ($arrayLength / 2); $i++) {
+        for ($i = 0; $i <= ($arrayLength / 2); $i++) {
             if ($A[$i + 1] - $A[$i] > 1) {
                 return $A[$i] + 1;
             }
@@ -23,6 +23,6 @@ class PermMissingElem
                 return $A[$arrayLength - $i - 2] + 1;
             }
         }
-        return $A[$arrayLength-1] + 1;
+        return $A[$arrayLength - 1] + 1;
     }
 }

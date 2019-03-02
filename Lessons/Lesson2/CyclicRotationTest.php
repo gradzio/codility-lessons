@@ -8,12 +8,13 @@ class CyclicRotationTest extends \PHPUnit\Framework\TestCase
     {
         $this->fixture = new \Lessons\Lesson1\CyclicRotation();
     }
+
     /**
      * @test
      */
     public function shouldReturnSameArrayWhenK0()
     {
-        $array = [1,2,3,4];
+        $array = [1, 2, 3, 4];
 
         $this->assertSame(solution($array, 0), $array);
     }
@@ -33,7 +34,7 @@ class CyclicRotationTest extends \PHPUnit\Framework\TestCase
      */
     public function shouldReturnSameArrayIfArrayLengthEqualsK()
     {
-        $array = [1,2,3,4,5,6,7,8,9];
+        $array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
         $this->assertSame(solution($array, 9), $array);
     }
@@ -60,13 +61,22 @@ class CyclicRotationTest extends \PHPUnit\Framework\TestCase
     {
         return [
             [
-                0, 2, 1, 1
+                0,
+                2,
+                1,
+                1
             ],
             [
-                1, 2, 1, 0
+                1,
+                2,
+                1,
+                0
             ],
             [
-                0, 2, 2, 0
+                0,
+                2,
+                2,
+                0
             ]
         ];
     }
@@ -75,16 +85,24 @@ class CyclicRotationTest extends \PHPUnit\Framework\TestCase
     {
         return [
             [
-                [], 1, []
+                [],
+                1,
+                []
             ],
             [
-                [1,2,3], 1, [3,1,2]
+                [1, 2, 3],
+                1,
+                [3, 1, 2]
             ],
             [
-                [1,2,3], 2, [2,3,1]
+                [1, 2, 3],
+                2,
+                [2, 3, 1]
             ],
             [
-                [1,2,3,4,5,6,7], 3, [5,6,7,1,2,3,4]
+                [1, 2, 3, 4, 5, 6, 7],
+                3,
+                [5, 6, 7, 1, 2, 3, 4]
             ]
         ];
     }

@@ -19,7 +19,6 @@ class FrogJmpTest extends TestCase
      */
     public function shouldReturn0($x, $y, $d, $expected)
     {
-        var_dump(date('Y-m-d', strtotime('13-03-2019 +32 weeks')));
         $this->assertSame($this->fixture->solution($x, $y, $d), $expected);
     }
 
@@ -27,10 +26,16 @@ class FrogJmpTest extends TestCase
     {
         return [
             [
-                1, 2, 1, 1
+                1,
+                2,
+                1,
+                1
             ],
             [
-                10, 85, 30, 3
+                10,
+                85,
+                30,
+                3
             ]
         ];
     }

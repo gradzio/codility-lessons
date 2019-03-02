@@ -8,7 +8,8 @@ class OddOccurencesInarrayTest extends \PHPUnit\Framework\TestCase
      * @test
      * @dataProvider arrayProvider
      */
-    public function shouldReturnSingleItem($array, $expected) {
+    public function shouldReturnSingleItem($array, $expected)
+    {
         $this->assertSame(solution($array), $expected);
     }
 
@@ -16,13 +17,16 @@ class OddOccurencesInarrayTest extends \PHPUnit\Framework\TestCase
     {
         return [
             [
-                [1, 2, 1], 2
+                [1, 2, 1],
+                2
             ],
             [
-                [1, 2, 1, 1, 2], 1
+                [1, 2, 1, 1, 2],
+                1
             ],
             [
-                [1, 2, 3, 3, 2, 1, 2], 2
+                [1, 2, 3, 3, 2, 1, 2],
+                2
             ]
         ];
     }

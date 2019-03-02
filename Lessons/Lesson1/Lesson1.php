@@ -1,7 +1,8 @@
 <?php
 
-function solution($N) {
-    if($N < 0) {
+function solution($N)
+{
+    if ($N < 0) {
         return 0;
     }
     $binary = decbin($N);
@@ -10,5 +11,7 @@ function solution($N) {
         return 0;
     }
 
-    return max(array_map(function ($zeros) { return strlen($zeros) - 2;}, $matchedZeros[1]));
+    return max(array_map(function ($zeros) {
+        return strlen($zeros) - 2;
+    }, $matchedZeros[1]));
 }
