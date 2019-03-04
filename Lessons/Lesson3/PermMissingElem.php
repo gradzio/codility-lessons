@@ -2,6 +2,7 @@
 
 namespace Lessons\Lesson3;
 
+
 class PermMissingElem
 {
     public function solution($A): int

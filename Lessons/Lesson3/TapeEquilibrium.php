@@ -2,7 +2,6 @@
 
 namespace Lessons\Lesson3;
 
-
 class TapeEquilibrium
 {
     public function solution($A): int

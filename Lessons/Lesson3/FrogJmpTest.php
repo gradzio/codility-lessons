@@ -6,35 +6,22 @@ use \PHPUnit\Framework\TestCase;
 
 use Lessons\Lesson3\FrogJmp;
 
-class FrogJmpTest extends TestCase
+class FrogJmpTest extends AcceptanceTest
 {
-    protected function setUp(): void
+    protected function makeFixture()
     {
-        $this->fixture = new FrogJmp();
+        return new FrogJmp();
     }
 
-    /**
-     * @test
-     * @dataProvider parameterProvider
-     */
-    public function shouldReturn0($x, $y, $d, $expected)
-    {
-        $this->assertSame($this->fixture->solution($x, $y, $d), $expected);
-    }
-
-    public function parameterProvider()
+    public function acceptanceProvider(): array
     {
         return [
             [
-                1,
-                2,
-                1,
+                [1, 2, 1],
                 1
             ],
             [
-                10,
-                85,
-                30,
+                [10, 85, 30],
                 3
             ]
         ];

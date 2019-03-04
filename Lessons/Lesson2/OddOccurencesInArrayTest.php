@@ -1,31 +1,29 @@
 <?php
 
-include('OddOccurencesInArray.php');
+namespace Tests;
 
-class OddOccurencesInarrayTest extends \PHPUnit\Framework\TestCase
+use Lessons\Lesson1\OddOccurencesInArray;
+
+class OddOccurencesInarrayTest extends AcceptanceTest
 {
-    /**
-     * @test
-     * @dataProvider arrayProvider
-     */
-    public function shouldReturnSingleItem($array, $expected)
+    protected function makeFixture()
     {
-        $this->assertSame(solution($array), $expected);
+        return new OddOccurencesInArray();
     }
 
-    public function arrayProvider()
+    public function acceptanceProvider(): array
     {
         return [
             [
-                [1, 2, 1],
+                [[1, 2, 1]],
                 2
             ],
             [
-                [1, 2, 1, 1, 2],
+                [[1, 2, 1, 1, 2]],
                 1
             ],
             [
-                [1, 2, 3, 3, 2, 1, 2],
+                [[1, 2, 3, 3, 2, 1, 2]],
                 2
             ]
         ];

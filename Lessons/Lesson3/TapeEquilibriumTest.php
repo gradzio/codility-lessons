@@ -5,38 +5,30 @@ namespace Tests;
 use Lessons\Lesson3\TapeEquilibrium;
 use PHPUnit\Framework\TestCase;
 
-class TapeEquilibriumTest extends TestCase
+class TapeEquilibriumTest extends AcceptanceTest
 {
-    /**
-     * @test
-     * @dataProvider acceptanceProvider
-     */
-    public function shouldPassAcceptanceTests($A, $expected)
+    protected function makeFixture()
     {
-        $fixture = new TapeEquilibrium();
-
-        $actual = $fixture->solution($A);
-
-        $this->assertEquals($expected, $actual);
+       return new TapeEquilibrium();
     }
 
-    public function acceptanceProvider()
+    public function acceptanceProvider(): array
     {
         return [
             [
-                [1, 2],
+                [[1, 2]],
                 1
             ],
             [
-                [1, -3, 2],
+                [[1, -3, 2]],
                 2
             ],
             [
-                [1, 2, 4, 2],
+                [[1, 2, 4, 2]],
                 3
             ],
             [
-                [3, 1, 2, 4, 3],
+                [[3, 1, 2, 4, 3]],
                 1
             ]
         ];

@@ -5,50 +5,42 @@ namespace Tests;
 use Lessons\Lesson3\PermMissingElem;
 use PHPUnit\Framework\TestCase;
 
-class PermMissingElemTest extends TestCase
+class PermMissingElemTest extends AcceptanceTest
 {
-    /**
-     * @test
-     * @dataProvider acceptanceProvider
-     */
-    public function shouldPassAcceptanceTesting($A, $expected)
+    protected function makeFixture()
     {
-        $fixture = new PermMissingElem();
-
-        $actual = $fixture->solution($A);
-
-        $this->assertEquals($expected, $actual);
+        return  new PermMissingElem();
     }
 
-    public function acceptanceProvider()
+    public function acceptanceProvider(): array
     {
         return [
             [
-                [2, 3, 1, 5],
+                [[2, 3, 1, 5]],
                 4
             ],
             [
-                [1, 3],
+                [[1, 3]],
                 2
             ],
             [
-                [1, 4, 5, 6, 2],
+                [[1, 4, 5, 6, 2]],
                 3
             ],
             [
-                [1, 2, 3, 4, 6],
+                [[1, 2, 3, 4, 6]],
                 5
             ],
             [
-                [2, 3, 4, 5],
+                [[2, 3, 4, 5]],
                 1
             ],
             [
-                [1, 2, 3, 4, 6],
+                [[1, 2, 3, 4, 6]],
                 5
             ],
             [
-                [1],
+                [[1]],
                 2
             ]
         ];

@@ -4,7 +4,7 @@ namespace Lessons\Lesson1;
 
 class CyclicRotation
 {
-    function ssolution($A, $K)
+    function solution($A, $K)
     {
         $arrayLength = count($A);
         if ($K === 0 || $arrayLength <= 1 || $arrayLength === $K) {

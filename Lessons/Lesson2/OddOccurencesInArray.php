@@ -1,10 +1,16 @@
 <?php
 
-function solution($A): int
+namespace Lessons\Lesson1;
+
+class OddOccurencesInArray
 {
-    foreach (array_count_values($A) as $number => $count) {
-        if ($count % 2 === 1) {
-            return $number;
+    function solution($A): int
+    {
+        foreach (array_count_values($A) as $number => $count) {
+            if ($count % 2 === 1) {
+                return $number;
+            }
         }
     }
 }
+
