@@ -16,6 +16,12 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./Lessons</directory>
+            <exclude>
+                <directory suffix="Test.php">./Lessons</directory>
+            </exclude>
         </whitelist>
     </filter>
+    <logging>
+        <log type="coverage-clover" target="coverage.xml"/>
+    </logging>
 </phpunit>

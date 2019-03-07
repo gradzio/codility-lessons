@@ -11,5 +11,7 @@ class OddOccurencesInArray
                 return $number;
             }
         }
+
+        return 0;
     }
 }

@@ -15,6 +15,10 @@ class OddOccurencesInarrayTest extends AcceptanceTest
     {
         return [
             [
+                [[]],
+                0
+            ],
+            [
                 [[1, 2, 1]],
                 2
             ],

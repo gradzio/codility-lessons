@@ -1,3 +1,9 @@
+# MaxCounters
+
+## Level: Easy
+
+### Description:
+
 A non-empty array A consisting of N integers is given.
 
 A permutation is a sequence containing each element from 1 to N once, and only once.

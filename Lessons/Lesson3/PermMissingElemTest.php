@@ -42,6 +42,10 @@ class PermMissingElemTest extends AcceptanceTest
             [
                 [[1]],
                 2
+            ],
+            [
+                [[1, 2, 3]],
+                4
             ]
         ];
     }

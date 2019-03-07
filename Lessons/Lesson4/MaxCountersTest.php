@@ -19,7 +19,7 @@ class MaxCountersTest extends AcceptanceTest
         $size = 2120;
         return [
             [
-                [$size, array_fill(1, $size, rand(1, $size)), array_fill(1, $size, 1)], 0.046
+                [$size, array_fill(1, $size, rand(1, $size)), array_fill(1, $size, 1)], 0.06
             ]
         ];
     }

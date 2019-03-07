@@ -16,6 +16,10 @@ class BinaryGapTest extends AcceptanceTest
     {
         return [
             [
+                [-1],
+                0
+            ],
+            [
                 [328],
                 2
             ],

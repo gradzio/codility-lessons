@@ -4,7 +4,7 @@ namespace Lessons\Lesson1;
 
 class BinaryGap
 {
-    public function solution($N)
+    public function solution($N): int
     {
         if ($N < 0) {
             return 0;

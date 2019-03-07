@@ -26,6 +26,10 @@ class PermCheckTest extends AcceptanceTest
                 0
             ],
             [
+                [[1, 3, 3, 4]],
+                0
+            ],
+            [
                 [[1,2,3]],
                 1
             ],
