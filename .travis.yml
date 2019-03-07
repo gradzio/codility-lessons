@@ -10,6 +10,7 @@ install:
   - travis_retry composer update --no-interaction --no-suggest --prefer-source --optimize-autoloader
 
 script:
+  - phpcs
   - phpunit
 
 notifications:
