@@ -14,8 +14,18 @@ Simply navigate to Lessons folder and the move to each lesson and open files.
 
 ## Installation
 
-`composer install`
+`composer install` which will install composer packages
 
-## Testing
+## CI pipeline
 
-`./vendor/bin/phpunit`
+I am using travis and you can check its configuration in `.travis.yml` file
+
+After each commit to master it will run following commands:
+
+### Linting
+
+`composer lint` which will check for PSR1 and PSR2 style
+
+### Testing
+
+`composer test` which will for breaking unit tests using phpunit
