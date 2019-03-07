@@ -1,0 +1,17 @@
+language: php
+php:
+  - 7.0
+  - 7.1
+
+before_install:
+  - composer self-update
+  - composer clear-cache
+
+install:
+  - travis_retry composer update --no-interaction --no-suggest --prefer-source --optimize-autoloader
+
+script:
+  - phpunit
+
+notifications:
+  - email: false
