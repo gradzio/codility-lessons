@@ -6,9 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 abstract class AcceptanceTest extends TestCase
 {
-    /**
-     * @var SingleParamSolutionInterface
-     */
     protected $fixture;
 
     protected function setUp(): void
