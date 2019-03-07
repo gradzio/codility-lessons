@@ -2,7 +2,6 @@
 
 namespace Tests;
 
-
 use Lessons\Lesson4\MissingInteger;
 
 class MissingIntegerTest extends AcceptanceTest

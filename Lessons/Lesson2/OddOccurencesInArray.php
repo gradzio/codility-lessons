@@ -4,7 +4,7 @@ namespace Lessons\Lesson1;
 
 class OddOccurencesInArray
 {
-    function solution($A): int
+    public function solution($A): int
     {
         foreach (array_count_values($A) as $number => $count) {
             if ($count % 2 === 1) {
@@ -13,4 +13,3 @@ class OddOccurencesInArray
         }
     }
 }
-

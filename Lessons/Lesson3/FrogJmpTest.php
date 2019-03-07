@@ -26,5 +26,4 @@ class FrogJmpTest extends AcceptanceTest
             ]
         ];
     }
-
 }

@@ -9,7 +9,7 @@ class TapeEquilibriumTest extends AcceptanceTest
 {
     protected function makeFixture()
     {
-       return new TapeEquilibrium();
+        return new TapeEquilibrium();
     }
 
     public function acceptanceProvider(): array

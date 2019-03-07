@@ -4,7 +4,7 @@ namespace Lessons\Lesson1;
 
 class CyclicRotation
 {
-    function solution($A, $K)
+    public function solution($A, $K)
     {
         $arrayLength = count($A);
         if ($K === 0 || $arrayLength <= 1 || $arrayLength === $K) {
@@ -17,7 +17,7 @@ class CyclicRotation
         return array_merge(array_slice($A, $chopSize), array_slice($A, 0, $chopSize));
     }
 
-    function calculateShiftedIndex($idx, $arrayLength, $k)
+    public function calculateShiftedIndex($idx, $arrayLength, $k)
     {
         return ($idx + $k) % $arrayLength;
     }

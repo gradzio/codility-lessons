@@ -9,7 +9,7 @@ class MaxCounters
         $counters = array_fill(0, $N, 0);
         $maxCount = 0;
         $last = 0;
-        foreach($A as $X) {
+        foreach ($A as $X) {
             if ($X == $N + 1) {
                 $last = $maxCount;
             } else {
@@ -25,8 +25,8 @@ class MaxCounters
             }
         }
 
-        for($i = 0; $i < count($counters); $i++) {
-            if($counters[$i] < $last) {
+        for ($i = 0; $i < count($counters); $i++) {
+            if ($counters[$i] < $last) {
                 $counters[$i] = $last;
             }
         }

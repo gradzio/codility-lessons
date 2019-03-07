@@ -77,5 +77,4 @@ class CyclicRotationTest extends AcceptanceTest
             ]
         ];
     }
-
 }

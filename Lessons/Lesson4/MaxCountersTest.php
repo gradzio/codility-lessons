@@ -2,7 +2,6 @@
 
 namespace Tests;
 
-
 use Lessons\Lesson4\MaxCounters;
 use PHPUnit\Framework\TestCase;
 

@@ -11,8 +11,8 @@ class FrogRiverOne
             return -1;
         }
 
-        $path = array_fill_keys(range(1,$X), 0);
-        foreach($A as $second => $position) {
+        $path = array_fill_keys(range(1, $X), 0);
+        foreach ($A as $second => $position) {
             unset($path[$position]);
             if (count($path) === 0) {
                 return $second;
