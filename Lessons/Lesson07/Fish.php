@@ -30,33 +30,3 @@ class Fish
         return $fishCount;
     }
 }
-
-class Stack implements \Countable
-{
-    private $items = [];
-
-    public function add(int $value): void
-    {
-        $this->items[] = $value;
-    }
-
-    public function peek(): int
-    {
-        return $this->items[$this->count() - 1];
-    }
-
-    public function remove(): int
-    {
-        return array_pop($this->items);
-    }
-
-    public function count(): int
-    {
-        return count($this->items);
-    }
-
-    public function isEmpty(): bool
-    {
-        return count($this->items) === 0;
-    }
-}
