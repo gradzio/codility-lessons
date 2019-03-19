@@ -6,7 +6,7 @@ class Stack implements \Countable
 {
     private $items = [];
 
-    public function add($value): void
+    public function add($value)
     {
         $this->items[] = $value;
     }
