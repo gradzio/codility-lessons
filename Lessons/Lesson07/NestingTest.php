@@ -17,7 +17,7 @@ class NestingTest extends AcceptanceTest
     {
         return [
             [
-                [['']], 0
+                [''], 0
             ]
         ];
     }
