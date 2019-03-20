@@ -6,11 +6,19 @@
 
 My solutions for Codility lessons using PHP.
 
-Criteria to pass is always reaching 100% correctness.
+Criteria to pass is always reaching 100%.
 
-Each Component contains Test.php file that represents BDD approach, implementation in .php file and .md file with description of the challenge.
+## Structure
 
-Simply navigate to Lessons folder and the move to each lesson and open files.
+Solutions are grouped in folders that have seperate namespace with a lesson number.
+
+Each Folder contains a solution set (component) that starts with a name of a Exercise
+
+Each Component contains:
+ 
+* Test.php file that represents BDD approach
+* Solution implementation in .php
+* Info file in .md with level of difficulty, complexity (detected by codility) and description of the challenge.
 
 ## Installation
 
