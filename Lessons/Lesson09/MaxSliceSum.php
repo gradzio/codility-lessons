@@ -14,7 +14,7 @@ class MaxSliceSum
 
         $maxSlice = 0;
         $maxLeft = 0;
-        for ($i = 0; $i < $arrayLength; $i++ ) {
+        for ($i = 0; $i < $arrayLength; $i++) {
             $maxLeft = max(0, $maxLeft + $A[$i]);
             $maxSlice = max($maxLeft, $maxSlice);
         }
