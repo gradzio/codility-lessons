@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson7\StoneWall;
+use PHPUnit\Framework\TestCase;
 
-class StoneWallTest extends AcceptanceTest
+class StoneWallTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new StoneWall();
+        $this->fixture = new StoneWall();
     }
 
     public function acceptanceProvider(): array

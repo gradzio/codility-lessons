@@ -3,13 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson6\Distinct;
+use PHPUnit\Framework\TestCase;
 
-class DistinctTest extends AcceptanceTest
+class DistinctTest extends TestCase
 {
+    use TestsAcceptance;
 
-    protected function makeFixture()
+    protected function setUp(): void
     {
-        return new Distinct();
+        $this->fixture = new Distinct();
     }
 
     public function acceptanceProvider(): array

@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson5\PassingCars;
+use PHPUnit\Framework\TestCase;
 
-class PassingCarsTest extends AcceptanceTest
+class PassingCarsTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new PassingCars();
+        $this->fixture = new PassingCars();
     }
 
     public function bigData()

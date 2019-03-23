@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson4\MissingInteger;
+use PHPUnit\Framework\TestCase;
 
-class MissingIntegerTest extends AcceptanceTest
+class MissingIntegerTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new MissingInteger();
+        $this->fixture = new MissingInteger();
     }
 
     public function acceptanceProvider(): array

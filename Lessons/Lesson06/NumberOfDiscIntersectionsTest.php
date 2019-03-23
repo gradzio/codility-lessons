@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson6\NumberOfDiscIntersections;
+use PHPUnit\Framework\TestCase;
 
-class NumberOfDiscIntersectionsTest extends AcceptanceTest
+class NumberOfDiscIntersectionsTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new NumberOfDiscIntersections();
+        $this->fixture = new NumberOfDiscIntersections();
     }
 
     public function acceptanceProvider(): array

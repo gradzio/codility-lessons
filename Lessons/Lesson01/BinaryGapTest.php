@@ -3,13 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson1\BinaryGap;
+use PHPUnit\Framework\TestCase;
 
-class BinaryGapTest extends AcceptanceTest
+class BinaryGapTest extends TestCase
 {
+    use TestsAcceptance;
 
-    public function makeFixture()
+    protected function setUp(): void
     {
-        return new BinaryGap();
+        $this->fixture = new BinaryGap();
     }
 
     public function acceptanceProvider(): array
