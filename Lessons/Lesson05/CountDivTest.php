@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson5\CountDiv;
+use PHPUnit\Framework\TestCase;
 
-class CountDivTest extends AcceptanceTest
+class CountDivTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new CountDiv();
+        $this->fixture = new CountDiv();
     }
 
     public function acceptanceProvider(): array

@@ -5,11 +5,13 @@ namespace Tests;
 use Lessons\Lesson3\TapeEquilibrium;
 use PHPUnit\Framework\TestCase;
 
-class TapeEquilibriumTest extends AcceptanceTest
+class TapeEquilibriumTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new TapeEquilibrium();
+        $this->fixture = new TapeEquilibrium();
     }
 
     public function acceptanceProvider(): array

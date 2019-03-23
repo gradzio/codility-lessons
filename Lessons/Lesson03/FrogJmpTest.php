@@ -6,11 +6,13 @@ use \PHPUnit\Framework\TestCase;
 
 use Lessons\Lesson3\FrogJmp;
 
-class FrogJmpTest extends AcceptanceTest
+class FrogJmpTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new FrogJmp();
+        $this->fixture = new FrogJmp();
     }
 
     public function acceptanceProvider(): array

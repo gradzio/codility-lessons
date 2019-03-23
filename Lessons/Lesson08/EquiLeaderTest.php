@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson8\EquiLeader;
+use PHPUnit\Framework\TestCase;
 
-class EquiLeaderTest extends AcceptanceTest
+class EquiLeaderTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new EquiLeader();
+        $this->fixture = new EquiLeader();
     }
 
     public function acceptanceProvider(): array

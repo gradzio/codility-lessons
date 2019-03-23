@@ -2,11 +2,15 @@
 
 namespace Tests;
 
-class MaxDoubleSliceSumTest extends AcceptanceTest
+use PHPUnit\Framework\TestCase;
+
+class MaxDoubleSliceSumTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new MaxDoubleSliceSum();
+        $this->fixture = new MaxDoubleSliceSum();
     }
 
     public function acceptanceProvider(): array

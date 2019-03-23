@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson1\OddOccurencesInArray;
+use PHPUnit\Framework\TestCase;
 
-class OddOccurencesInarrayTest extends AcceptanceTest
+class OddOccurencesInarrayTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new OddOccurencesInArray();
+        $this->fixture = new OddOccurencesInArray();
     }
 
     public function acceptanceProvider(): array

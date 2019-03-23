@@ -3,9 +3,17 @@
 namespace Tests;
 
 use Lessons\Lesson4\PermCheck;
+use PHPUnit\Framework\TestCase;
 
-class PermCheckTest extends AcceptanceTest
+class PermCheckTest extends TestCase
 {
+    use TestsAcceptance;
+
+    protected function setUp(): void
+    {
+        $this->fixture = new PermCheck();
+    }
+
     public function acceptanceProvider(): array
     {
         return [
@@ -42,10 +50,5 @@ class PermCheckTest extends AcceptanceTest
                 1
             ]
         ];
-    }
-
-    protected function makeFixture()
-    {
-        return new PermCheck();
     }
 }

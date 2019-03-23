@@ -5,11 +5,13 @@ namespace Tests;
 use Lessons\Lesson3\PermMissingElem;
 use PHPUnit\Framework\TestCase;
 
-class PermMissingElemTest extends AcceptanceTest
+class PermMissingElemTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return  new PermMissingElem();
+        $this->fixture = new PermMissingElem();
     }
 
     public function acceptanceProvider(): array

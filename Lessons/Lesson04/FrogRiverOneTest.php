@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson4\FrogRiverOne;
+use PHPUnit\Framework\TestCase;
 
-class FrogRiverOneTest extends AcceptanceTest
+class FrogRiverOneTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new FrogRiverOne();
+        $this->fixture = new FrogRiverOne();
     }
 
     public function acceptanceProvider(): array
