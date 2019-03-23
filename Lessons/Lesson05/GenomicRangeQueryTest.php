@@ -3,14 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson5\GenomicRangeQuery;
+use PHPUnit\Framework\TestCase;
 
-class GenomicRangeQueryTest extends AcceptanceTest
+class GenomicRangeQueryTest extends TestCase
 {
-    use TestsPerformance;
+    use TestsAcceptance, TestsPerformance;
 
-    protected function makeFixture()
+    protected function setUp(): void
     {
-        return new GenomicRangeQuery();
+        $this->fixture = new GenomicRangeQuery();
     }
 
     public function performanceProvider(): array

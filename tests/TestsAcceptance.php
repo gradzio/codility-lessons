@@ -2,17 +2,9 @@
 
 namespace Tests;
 
-use PHPUnit\Framework\TestCase;
-
-abstract class AcceptanceTest extends TestCase
+trait TestsAcceptance
 {
     protected $fixture;
-
-    protected function setUp(): void
-    {
-        $this->fixture = $this->makeFixture();
-    }
-
     /**
      * @test
      * @dataProvider acceptanceProvider
@@ -25,5 +17,4 @@ abstract class AcceptanceTest extends TestCase
     }
 
     abstract public function acceptanceProvider(): array;
-    abstract protected function makeFixture();
 }

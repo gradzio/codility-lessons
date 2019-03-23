@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson8\Dominator;
+use PHPUnit\Framework\TestCase;
 
-class DominatorTest extends AcceptanceTest
+class DominatorTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new Dominator();
+        $this->fixture = new Dominator();
     }
 
     public function acceptanceProvider(): array

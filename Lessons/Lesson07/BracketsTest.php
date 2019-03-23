@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson7\Brackets;
+use PHPUnit\Framework\TestCase;
 
-class BracketsTest extends AcceptanceTest
+class BracketsTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new Brackets();
+        $this->fixture = new Brackets();
     }
 
     public function acceptanceProvider(): array

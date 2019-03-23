@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson6\MaxProductOfThree;
+use PHPUnit\Framework\TestCase;
 
-class MaxProductOfThreeTest extends AcceptanceTest
+class MaxProductOfThreeTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new MaxProductOfThree();
+        $this->fixture = new MaxProductOfThree();
     }
 
     public function acceptanceProvider(): array

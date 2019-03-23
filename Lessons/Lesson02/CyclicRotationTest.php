@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson1\CyclicRotation;
+use PHPUnit\Framework\TestCase;
 
-class CyclicRotationTest extends AcceptanceTest
+class CyclicRotationTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new CyclicRotation();
+        $this->fixture = new CyclicRotation();
     }
 
     /**

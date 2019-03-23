@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson9\MaxSliceSum;
+use PHPUnit\Framework\TestCase;
 
-class MaxSliceSumTest extends AcceptanceTest
+class MaxSliceSumTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new MaxSliceSum();
+        $this->fixture = new MaxSliceSum();
     }
 
     public function acceptanceProvider(): array

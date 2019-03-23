@@ -5,13 +5,13 @@ namespace Tests;
 use Lessons\Lesson4\MaxCounters;
 use PHPUnit\Framework\TestCase;
 
-class MaxCountersTest extends AcceptanceTest
+class MaxCountersTest extends TestCase
 {
-    use TestsPerformance;
+    use TestsAcceptance, TestsPerformance;
 
-    protected function makeFixture()
+    protected function setUp(): void
     {
-        return new MaxCounters();
+        $this->fixture = new MaxCounters();
     }
 
     public function performanceProvider(): array

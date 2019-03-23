@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson5\MinAvgTwoSlice;
+use PHPUnit\Framework\TestCase;
 
-class MinAvgTwoSliceTest extends AcceptanceTest
+class MinAvgTwoSliceTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new MinAvgTwoSlice();
+        $this->fixture = new MinAvgTwoSlice();
     }
 
     public function acceptanceProvider(): array

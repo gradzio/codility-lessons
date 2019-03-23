@@ -3,12 +3,15 @@
 namespace Tests;
 
 use Lessons\Lesson6\Triangle;
+use PHPUnit\Framework\TestCase;
 
-class TriangleTest extends AcceptanceTest
+class TriangleTest extends TestCase
 {
-    protected function makeFixture()
+    use TestsAcceptance;
+
+    protected function setUp(): void
     {
-        return new Triangle();
+        $this->fixture = new Triangle();
     }
 
     public function acceptanceProvider(): array
