@@ -10,8 +10,8 @@ class CountFactors
             return $N;
         }
         $counter = 0;
-        // $incrementer = $N % 2 === 0 ? 1 : 2;
-        for ($i = 1;  $i <= sqrt($N); $i++) {
+        $incrementer = $N % 2 === 0 ? 1 : 2;
+        for ($i = 1; $i <= sqrt($N); $i += $incrementer) {
             if ($N % $i == 0) {
                 $counter++;
                 if ($i != $N / $i) {
