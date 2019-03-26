@@ -23,7 +23,7 @@ class Peaks
             return 0;
         }
 
-        for ($size = count($peaks); $size > 0; $size--) {
+        for ($size = count($peaks); $size > 1; $size--) {
             if ($arrayLength % $size == 0) {
                 $blockSize = $arrayLength / $size;
                 $found = array_fill(0, $size, false);
@@ -41,6 +41,6 @@ class Peaks
             }
         }
 
-        return 0;
+        return 1;
     }
 }
